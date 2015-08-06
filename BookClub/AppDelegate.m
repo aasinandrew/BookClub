@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "FriendsViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    FriendsViewController * fVC = (FriendsViewController *)[(UINavigationController *) self.window.rootViewController topViewController];
+    fVC.moc = self.managedObjectContext;
     return YES;
 }
 
